@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/4eb1136a11.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- hamburger menu:
+    https://codepen.io/sacsam005/pen/xxpLgyy -->
+
     <link rel="stylesheet" href="/css/style.css" />
-    <!-- glider -->
-    <link rel="stylesheet" type="text/css" href="glider.css" />
 
     <title>lesimore</title>
   </head>
@@ -21,15 +28,20 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#">o mne</a>
+              <a class="menu__link" href="/omne.html">o mne</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">aktivity</a>
+              <a class="menu__link" href="/aktivity.html">aktivity</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">kontakt</a>
+              <a class="menu__link" href="/kontakt.html">kontakt</a>
             </li>
           </ul>
+          <div class="menu__hamburger">
+            <span class="menu__bar"></span>
+            <span class="menu__bar"></span>
+            <span class="menu__bar"></span>
+          </div>
         </nav>
       </header>
       <div class="hero">
@@ -90,11 +102,11 @@
           </div>
         </div>
         <!-- <div class="content__button"> -->
-        <a class="content__link" href="">
+        <a class="content__link" href="/aktivity.html">
           <button class="content__activity">aktivity</button>
         </a>
         <!-- </div> -->
-        <div class="content__box">
+        <div class="content__brand">
           <h3 class="content__subtitle">značka</h3>
           <div class="content__text">
             <div class="content__description">
@@ -112,7 +124,13 @@
                 rerum obcaecati vitae voluptate, totam, cumque aperiam.
               </p>
             </div>
-            <img src="/images/3-1.jpg" alt="" />
+            <div class="content__gallery">
+              <img class="image-1" src="/images/znacka/111.png" alt="" />
+              <img class="image-2" src="/images/znacka/222.png" alt="" />
+              <img class="image-3" src="/images/znacka/333.png" alt="" />
+              <!-- <img class="image-5" src="/images/znacka/444.png" alt="" />
+              <img class="image-6" src="/images/znacka/555.png" alt="" /> -->
+            </div>
           </div>
         </div>
       </div>
