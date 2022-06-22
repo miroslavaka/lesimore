@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  grid-row: 1/2;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+  // position: relative;
+  @media screen and (min-width: 700px) {
+    grid-column: 1/-1;
+  }
+}

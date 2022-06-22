@@ -11,6 +11,12 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('.menu__link').forEach((link) =>
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+  }),
+);
+
+document.querySelectorAll('.menu__link').forEach((link) =>
+  link.addEventListener('click', () => {
+    link.classList.toggle('menu-selected');
   }),
 );

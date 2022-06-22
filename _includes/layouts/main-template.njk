@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/4eb1136a11.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <a href="">
+          <div class="logo">
+            <img src="./images/logo.png" alt="logo značky lesimore" />
+          </div>
+        </a>
+        {% include 'partials/menu.njk' %}
+      </header>
+      <main class="main">
+        {{ content | safe }}
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <h3 class="footer__title">"na parádu pre teba i pre planétu"</h3>
+        </div>
+        <div class="footer__bottom">
+          <h4 class="footer__subtitle">
+            © lesimore, <span class="year"></span> &nbsp;
+          </h4>
+          <a class="footer__link" href="mailto:lesimore@gmail.com"
+            >lesimore@gmail.com</a
+          >
+        </div>
+      </footer>
+    </div>
+    <script src="/src/script.js"></script>
+  </body>
+</html>

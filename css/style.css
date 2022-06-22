@@ -64,30 +64,42 @@
   justify-self: end;
 }
 
-html {
-  box-sizing: border-box;
-  line-height: 1.5;
-  color: #424141;
+.footer {
+  grid-row: 4/5;
+  letter-spacing: 1.5px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  text-align: center;
+  margin-top: 3.5rem;
+}
+.footer__top {
+  grid-row: 1/2;
+}
+.footer__top h3 {
+  margin-bottom: 0;
+}
+.footer__bottom {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.footer__subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-self: right;
+}
+.footer__link {
+  justify-self: left;
 }
 
-*,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  width: 100%;
-}
-
-.layout {
+.contact {
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-template-rows: 55px auto auto auto;
+  letter-spacing: 1.5px;
 }
+
 .header {
   width: 100%;
   grid-row: 1/2;
@@ -133,13 +145,13 @@ body {
   }
 }
 .menu__item {
+  position: relative;
   margin: 0 1rem;
   padding: 0;
   padding: 15px 18px;
   letter-spacing: 1.2px;
 }
 .menu__link {
-  display: block;
   text-decoration: none;
   color: #424141;
   z-index: 1;
@@ -148,6 +160,23 @@ body {
   right: 0;
   z-index: 100;
   transition: 0.2s ease;
+}
+.menu .menu-selected {
+  background-color: #d6e3dd;
+  padding: 16px 18px;
+  border-radius: 7px;
+  z-index: 1;
+}
+.menu .menu-selected::before {
+  content: "";
+  background-color: #d6e3dd;
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  transform: translate(-50%, 50%) rotate(45deg);
 }
 .menu__hamburger {
   display: block;
@@ -162,7 +191,6 @@ body {
   width: 1.5rem;
   height: 3px;
   display: block;
-  /*color: black;*/
   padding: 0;
   margin: 6px 30px 6px 6px;
   margin-right: 40px;
@@ -190,6 +218,30 @@ body {
   width: 100%;
 }
 
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+  color: #424141;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.layout {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-rows: 55px auto auto auto;
+}
 /*HAMBURGER menu*/
 .hero {
   grid-row: 2/3;
@@ -356,41 +408,5 @@ body {
 .card__title {
   text-align: center;
   color: #424141;
-  letter-spacing: 1.5px;
-}
-
-.footer {
-  grid-row: 4/5;
-  letter-spacing: 1.5px;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  text-align: center;
-  margin-top: 3.5rem;
-}
-.footer__top {
-  grid-row: 1/2;
-}
-.footer__top h3 {
-  margin-bottom: 0;
-}
-.footer__bottom {
-  grid-row: 2/3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-}
-.footer__subtitle {
-  margin-top: 0;
-  margin-bottom: 0;
-  justify-self: right;
-}
-.footer__link {
-  justify-self: left;
-}
-
-.contact {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   letter-spacing: 1.5px;
 }/*# sourceMappingURL=style.css.map */
