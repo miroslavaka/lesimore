@@ -151,6 +151,11 @@
   padding: 15px 18px;
   letter-spacing: 1.2px;
 }
+.menu__item:hover {
+  background-color: #d6e3dd;
+  padding: 15px 18px;
+  z-index: 1;
+}
 .menu__link {
   text-decoration: none;
   color: #424141;
@@ -160,14 +165,12 @@
   right: 0;
   z-index: 100;
   transition: 0.2s ease;
-}
-.menu .menu-selected {
   background-color: #d6e3dd;
   padding: 16px 18px;
   border-radius: 7px;
   z-index: 1;
 }
-.menu .menu-selected::before {
+.menu .active::before {
   content: "";
   background-color: #d6e3dd;
   position: absolute;

@@ -46,11 +46,11 @@
     padding: 15px 18px;
     letter-spacing: 1.2px;
   }
-  // &__item:hover {
-  //   background-color: #d6e3dd;
-  //   padding: 15px 18px;
-  //   z-index: 1;
-  // }
+  &__item:hover {
+    background-color: #d6e3dd;
+    padding: 15px 18px;
+    z-index: 1;
+  }
   &__link {
     //display: block;
     text-decoration: none;
@@ -61,14 +61,12 @@
     right: 0;
     z-index: 100;
     transition: 0.2s ease;
-  }
-  .menu-selected {
     background-color: #d6e3dd;
     padding: 16px 18px;
     border-radius: 7px;
     z-index: 1;
   }
-  .menu-selected::before {
+  .active::before {
     content: '';
     background-color: #d6e3dd;
     // display: flex;
@@ -80,6 +78,24 @@
     z-index: -1;
     transform: translate(-50%, 50%) rotate(45deg);
   }
+  // .menu-selected {
+  //   background-color: #d6e3dd;
+  //   padding: 16px 18px;
+  //   border-radius: 7px;
+  //   z-index: 1;
+  // }
+  // .menu-selected::before {
+  //   content: '';
+  //   background-color: #d6e3dd;
+  //   // display: flex;
+  //   position: absolute;
+  //   bottom: 0px;
+  //   left: 25%;
+  //   height: 10px;
+  //   width: 10px;
+  //   z-index: -1;
+  //   transform: translate(-50%, 50%) rotate(45deg);
+  // }
   /*HAMBURGER menu*/
   &__hamburger {
     display: block;

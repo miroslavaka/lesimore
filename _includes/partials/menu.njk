@@ -1,12 +1,12 @@
 <nav class="menu">
   <ul class="menu__list">
-    <li class="menu__item">
+    <li class="menu__item  {{ 'active' if page.fileSlug === 'omne' }}">
       <a class="menu__link" href="/omne/"> o mne </a>
     </li>
-    <li class="menu__item">
+    <li class="menu__item  {{ 'active' if page.fileSlug === 'aktivity' }}">
       <a class="menu__link" href="/aktivity/"> aktivity </a>
     </li>
-    <li class="menu__item">
+    <li class="menu__item {{ 'active' if page.fileSlug === 'kontakt' }}">
       <a class="menu__link" href="/kontakt/">kontakt</a>
     </li>
   </ul>
