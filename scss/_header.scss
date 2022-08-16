@@ -5,8 +5,11 @@
 
   justify-content: space-between;
   align-items: flex-end;
-  // position: relative;
+  padding-left: 20px;
   @media screen and (min-width: 700px) {
     grid-column: 1/-1;
   }
+}
+.logo {
+  margin-bottom: 10px;
 }

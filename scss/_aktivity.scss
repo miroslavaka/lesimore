@@ -4,14 +4,20 @@
   }
   &__box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    //grid-template-columns: 1fr 1fr;
     gap: 5px;
     padding: 0 2.5rem;
   }
+  &__description {
+    @media screen and (min-width: 600px) {
+      display: flex;
+    }
+  }
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    //grid-template-rows: repeat(3, auto);
     gap: 5px;
   }
   &__gallery img {
@@ -19,11 +25,11 @@
   }
   &__text {
     letter-spacing: 1.5px;
-    background-color: #d6e3dd;
+    // background-color: #d6e3dd;
     text-align: left;
-    padding: 50px 40px;
-    border-radius: 5px;
-    border: 1px solid #f6f6f6;
+    //padding: 50px 40px;
+    // border-radius: 5px;
+    // border: 1px solid #f6f6f6;
   }
 }
 
@@ -58,4 +64,75 @@
   grid-row: 4/5;
   align-self: center;
   justify-self: end;
+}
+.activities {
+  display: grid;
+  gap: 10px;
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    padding: 0 4rem;
+    @media screen and (min-width: 900px) {
+      gap: 15px;
+      padding: 0 4.5rem;
+    }
+    @media screen and (min-width: 1050px) {
+      padding: 0 5rem;
+    }
+  }
+  &__grid--six {
+    @media screen and (min-width: 1050px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 5px;
+    }
+  }
+  &__item:first-child {
+    @media screen and (min-width: 1050px) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  &__item:nth-child(2) {
+    @media screen and (min-width: 1050px) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  &__photo {
+    width: 400px;
+    border-radius: 5px;
+    @media screen and (min-width: 1050px) {
+      width: 100%;
+    }
+  }
+  &__label {
+    width: 100px;
+    height: 100px;
+    background-color: #d6e3dd;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    box-shadow: 0px 1px 2.5px 0px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    left: 4.5rem;
+    top: 10px;
+    @media screen and (min-width: 900px) {
+      left: 5rem;
+    }
+    @media screen and (min-width: 1050px) {
+      left: 5.5rem;
+    }
+  }
+  &__subtitle {
+    text-align: center;
+    color: white;
+  }
+}
+.kontakt {
+  letter-spacing: 1.5px;
+  text-align: center;
 }
