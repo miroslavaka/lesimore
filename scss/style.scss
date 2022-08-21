@@ -25,7 +25,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-
+  position: relative;
   grid-template-rows: 55px auto auto auto;
   @media screen and (min-width: 700px) {
   }
@@ -85,7 +85,6 @@ body {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
       gap: 1rem;
-
       justify-items: center;
     }
     align-items: center;
@@ -94,9 +93,9 @@ body {
     img {
       width: 100%;
       padding: 50px 40px;
+      border-radius: 5px;
       @media screen and (min-width: 500px) {
         width: 70%;
-
         grid-column: 1/2;
         grid-row: 1/2;
       }
@@ -125,8 +124,12 @@ body {
     text-align: center;
     letter-spacing: 1.5px;
     font-size: 1.5rem;
-    margin-top: 4.5rem;
+    color: #d6e3dd;
+    text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
+      0 4px 4px rgb(0, 0, 0, 0.01);
+    margin-top: 2rem;
   }
+
   &__description {
     background-color: #d6e3dd;
     text-align: left;
@@ -153,6 +156,7 @@ body {
 .card {
   &__image {
     width: 100%;
+    border-radius: 5px;
   }
   &__link {
     text-decoration: none;
@@ -167,13 +171,18 @@ body {
   align-items: center;
   padding: 0 2.5rem;
   letter-spacing: 1.5px;
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 780px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding: 0 2.5rem;
+    gap: 2.5rem;
   }
-  @media screen and (min-width: 900px) {
+
+  @media screen and (min-width: 1050px) {
+    padding: 0 5.5rem;
+    gap: 3rem;
+  }
+  @media screen and (min-width: 1150px) {
+    padding: 0 7rem;
   }
   &__gallery {
     display: grid;
@@ -190,5 +199,30 @@ body {
   }
   &__photo {
     width: 100%;
+    border-radius: 5px;
   }
+}
+.back-to-top .fa {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #d6e3dd;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0.5;
+  position: absolute;
+  right: 2rem;
+  bottom: 6.5rem;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.05);
+  @media screen and (min-width: 30rem) {
+    bottom: 4rem;
+  }
+  @media screen and (min-width: 48.75rem) {
+    bottom: 2.5rem;
+  }
+}
+.back-to-top .fa::before {
+  content: '\f106';
+  display: inline-block;
+  margin-top: 0.6rem;
 }
