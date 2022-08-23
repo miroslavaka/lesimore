@@ -79,3 +79,38 @@
     cursor: pointer;
   }
 }
+.animated {
+  //line-height: 15vh;
+  // perspective: 1000px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  &__text {
+    position: absolute;
+    font-size: 1.1rem;
+    user-select: none;
+    pointer-events: none;
+    animation: animate 7.5s linear infinite;
+  }
+  &__text span {
+    position: absolute;
+    top: -100px;
+    text-transform: uppercase;
+    display: inline-block;
+    transform-origin: 0 150px;
+  }
+}
+.animated__text-mentol {
+  color: #d6e3dd;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  360% {
+    transform: rotate(360deg);
+  }
+}
