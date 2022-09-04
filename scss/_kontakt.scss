@@ -15,15 +15,21 @@
     transition: 2s;
   }
   &__social {
+    position: relative;
   }
   &__social a {
     text-decoration: none;
-    color: #d6e3dd;
+    color: #424141;
     font-size: x-large;
     text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
       0 4px 4px rgb(0, 0, 0, 0.01);
     margin: 0 5px;
   }
+  &__social a:hover {
+    color: #d6e3dd;
+    transition: 2s ease;
+  }
+
   &__contactform {
     width: 100%;
     max-width: 800px;
@@ -38,6 +44,9 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+  }
+  &__formtitle {
+    font-family: 'Special Elite', cursive;
   }
   &__field {
     width: 100%;
@@ -78,11 +87,14 @@
     border: none;
     cursor: pointer;
   }
+  &__title {
+    font-family: 'Special Elite', cursive;
+  }
+  &__subtitle {
+    font-family: 'Special Elite', cursive;
+  }
 }
 .animated {
-  //line-height: 15vh;
-  // perspective: 1000px;
-  text-align: center;
   position: relative;
   display: flex;
   justify-content: center;
@@ -93,7 +105,7 @@
     font-size: 1.1rem;
     user-select: none;
     pointer-events: none;
-    animation: animate 7.5s linear infinite;
+    //animation: animate 7.5s linear infinite;
   }
   &__text span {
     position: absolute;
@@ -103,14 +115,31 @@
     transform-origin: 0 150px;
   }
 }
-.animated__text-mentol {
-  color: #d6e3dd;
-}
+
 @keyframes animate {
   0% {
     transform: rotate(0deg);
   }
   360% {
     transform: rotate(360deg);
+  }
+}
+
+.circle-handmade {
+  padding: 5rem 0 8rem 0;
+
+  &__title {
+    letter-spacing: 1.5px;
+    font-family: 'Special Elite', cursive;
+  }
+  &__green {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: hsl(152, 19%, 86%, 0.5);
+    position: absolute;
+    top: 100px;
+    right: 35%;
+    z-index: -10;
   }
 }

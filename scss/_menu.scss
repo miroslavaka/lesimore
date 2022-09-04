@@ -39,6 +39,16 @@
     padding: 15px 18px;
     z-index: 1;
   }
+  &__item::before {
+    background-color: #d6e3dd;
+    position: absolute;
+    bottom: 0px;
+    left: 25%;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    transform: translate(-50%, 50%) rotate(45deg);
+  }
   &__link {
     text-decoration: none;
     color: #424141;
@@ -69,16 +79,6 @@
       z-index: -1;
       transform: translate(-50%, 50%) rotate(45deg);
     }
-    // content: '';
-    // background-color: #d6e3dd;
-
-    // position: absolute;
-    // bottom: 0px;
-    // left: 25%;
-    // height: 10px;
-    // width: 10px;
-    // z-index: -1;
-    // transform: translate(-50%, 50%) rotate(45deg);
   }
 
   /*HAMBURGER menu*/

@@ -3,6 +3,7 @@
 }
 .services__title {
   text-align: center;
+  font-family: "Special Elite", cursive;
 }
 .services__box {
   display: grid;
@@ -185,6 +186,7 @@
 }
 
 .footer {
+  position: relative;
   grid-row: 4/5;
   letter-spacing: 1.5px;
   display: grid;
@@ -197,13 +199,13 @@
 }
 .footer__top h3 {
   margin-bottom: 0;
-  font-family: "Yomogi", cursive;
+  font-family: "Special Elite", cursive;
 }
 .footer__bottom {
   grid-row: 2/3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 .footer__subtitle {
   margin-top: 0;
@@ -244,6 +246,34 @@
   transform: translate(-50%, 0);
   margin-top: -15px;
 }
+.footer__back-to-top .fa {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #d6e3dd;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0.5;
+  position: absolute;
+  right: 2rem;
+  bottom: 6.5rem;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.05);
+}
+@media screen and (min-width: 30rem) {
+  .footer__back-to-top .fa {
+    bottom: 4rem;
+  }
+}
+@media screen and (min-width: 48.75rem) {
+  .footer__back-to-top .fa {
+    bottom: 2.5rem;
+  }
+}
+.footer__back-to-top .fa::before {
+  content: "\f106";
+  display: inline-block;
+  margin-top: 0.6rem;
+}
 
 .contact {
   text-align: center;
@@ -261,12 +291,19 @@
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.01);
   transition: 2s;
 }
+.contact__social {
+  position: relative;
+}
 .contact__social a {
   text-decoration: none;
-  color: #d6e3dd;
+  color: #424141;
   font-size: x-large;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.01);
   margin: 0 5px;
+}
+.contact__social a:hover {
+  color: #d6e3dd;
+  transition: 2s ease;
 }
 .contact__contactform {
   width: 100%;
@@ -282,6 +319,9 @@
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+.contact__formtitle {
+  font-family: "Special Elite", cursive;
 }
 .contact__field {
   width: 100%;
@@ -322,9 +362,14 @@
   border: none;
   cursor: pointer;
 }
+.contact__title {
+  font-family: "Special Elite", cursive;
+}
+.contact__subtitle {
+  font-family: "Special Elite", cursive;
+}
 
 .animated {
-  text-align: center;
   position: relative;
   display: flex;
   justify-content: center;
@@ -339,8 +384,6 @@
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
-  -webkit-animation: animate 7.5s linear infinite;
-          animation: animate 7.5s linear infinite;
 }
 .animated__text span {
   position: absolute;
@@ -348,10 +391,6 @@
   text-transform: uppercase;
   display: inline-block;
   transform-origin: 0 150px;
-}
-
-.animated__text-mentol {
-  color: #d6e3dd;
 }
 
 @-webkit-keyframes animate {
@@ -371,6 +410,24 @@
     transform: rotate(360deg);
   }
 }
+.circle-handmade {
+  padding: 5rem 0 8rem 0;
+}
+.circle-handmade__title {
+  letter-spacing: 1.5px;
+  font-family: "Special Elite", cursive;
+}
+.circle-handmade__green {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: hsla(152deg, 19%, 86%, 0.5);
+  position: absolute;
+  top: 100px;
+  right: 35%;
+  z-index: -10;
+}
+
 .header {
   width: 100%;
   grid-row: 1/2;
@@ -432,6 +489,16 @@
   background-color: #d6e3dd;
   padding: 15px 18px;
   z-index: 1;
+}
+.menu__item::before {
+  background-color: #d6e3dd;
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  transform: translate(-50%, 50%) rotate(45deg);
 }
 .menu__link {
   text-decoration: none;
@@ -524,7 +591,7 @@
 }
 .projects__project {
   padding: 10px;
-  background-color: #d6e3dd;
+  background-color: hsla(152deg, 19%, 86%, 0.5);
   padding: 15px 35px;
   letter-spacing: 1.5px;
   border-radius: 5px;
@@ -536,6 +603,9 @@
   flex-direction: column;
   align-items: center;
   letter-spacing: 1.5px;
+}
+.public__title {
+  font-family: "Special Elite", cursive;
 }
 .public__activities {
   width: 100%;
@@ -553,6 +623,59 @@
   color: #d6e3dd;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.01);
   transition: 2s;
+}
+
+.product__box {
+  display: flex;
+  justify-content: space-between;
+}
+.product__link, .product__vip {
+  display: inline-block;
+  margin-top: 3rem;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: #424141;
+}
+.product__vip {
+  background-color: #d6e3dd;
+  padding: 0.6rem 3rem;
+  border-radius: 5px;
+}
+.product__link:hover {
+  color: #d6e3dd;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.01);
+  transition: 1.1s;
+}
+
+.product-1__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  padding: 4rem;
+}
+.product-1__item {
+  position: relative;
+}
+.product-1__title {
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 35%;
+}
+.product-1__image {
+  width: 100%;
+}
+.product-1__detail {
+  display: flex;
+  padding: 0 4rem;
+}
+.product-1__detailimg img {
+  width: 100%;
+  padding-right: 4rem;
 }
 
 html {
@@ -577,7 +700,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  position: relative;
   grid-template-rows: 55px auto auto auto;
 }
 /*HAMBURGER menu*/
@@ -676,17 +798,10 @@ body {
 .content__subtitle {
   text-align: center;
   letter-spacing: 1.5px;
+  font-family: "Special Elite", cursive;
   font-size: 1.5rem;
-  color: #d6e3dd;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.01);
-  margin-top: 2rem;
-}
-.content__description {
-  background-color: #d6e3dd;
-  text-align: left;
-  padding: 50px 40px;
-  border-radius: 5px;
-  border: 1px solid #f6f6f6;
+  margin: 3rem 0;
 }
 
 .cards {
@@ -716,16 +831,54 @@ body {
 .card__link {
   text-decoration: none;
 }
+.card__bottom {
+  position: relative;
+}
 .card__title {
   text-align: center;
   color: #424141;
   letter-spacing: 1.5px;
+}
+.card__title {
+  width: 75%;
+  height: 70px;
+  right: 0;
+  z-index: 100;
+  transition: 0.2s ease;
+  padding: 16px 18px;
+  border-radius: 20px;
+  z-index: 1;
+  background-color: #d6e3dd;
+  background-color: white;
+  border: 1px solid #d6e3dd;
+  letter-spacing: 1.5px;
+  margin: 0;
+  margin-bottom: 1px;
+  float: right;
+  margin-right: 35px;
+}
+.card__title::after {
+  content: "";
+  background-color: #d6e3dd;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  left: 25%;
+  height: 20px;
+  width: 20px;
+  z-index: 10;
+  transform: translate(-50%, 50%) rotate(45deg);
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid #d6e3dd;
+  border-right: 1px solid #d6e3dd;
 }
 
 .brand {
   align-items: center;
   padding: 0 2.5rem;
   letter-spacing: 1.5px;
+  margin: 4rem 0 2rem 0;
 }
 @media screen and (min-width: 780px) {
   .brand {
@@ -734,10 +887,14 @@ body {
     gap: 2.5rem;
   }
 }
+@media screen and (min-width: 900px) {
+  .brand {
+    padding: 0 3.5rem;
+  }
+}
 @media screen and (min-width: 1050px) {
   .brand {
     padding: 0 5.5rem;
-    gap: 3rem;
   }
 }
 @media screen and (min-width: 1150px) {
@@ -745,43 +902,45 @@ body {
     padding: 0 7rem;
   }
 }
+@media screen and (min-width: 1250px) {
+  .brand {
+    padding: 0 7.5rem;
+  }
+}
 .brand__gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  display: flex;
   padding-top: 50px;
   justify-content: center;
+}
+.brand__gallery img {
+  width: 50%;
 }
 .brand__photo {
   width: 100%;
   border-radius: 5px;
 }
-
-.back-to-top .fa {
+.brand h3 {
+  font-family: "Special Elite", cursive;
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: #d6e3dd;
+  margin-left: 40px;
+  font-size: x-large;
+}
+.brand p {
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 20px 40px;
   border-radius: 5px;
-  text-align: center;
-  opacity: 0.5;
-  position: absolute;
-  right: 2rem;
-  bottom: 6.5rem;
-  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.05);
-}
-@media screen and (min-width: 30rem) {
-  .back-to-top .fa {
-    bottom: 4rem;
-  }
-}
-@media screen and (min-width: 48.75rem) {
-  .back-to-top .fa {
-    bottom: 2.5rem;
-  }
+  border: 1px solid #f6f6f6;
 }
 
-.back-to-top .fa::before {
-  content: "\f106";
-  display: inline-block;
-  margin-top: 0.6rem;
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: hsla(152deg, 19%, 86%, 0.5);
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  z-index: -10;
 }/*# sourceMappingURL=style.css.map */

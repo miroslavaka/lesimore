@@ -2,6 +2,7 @@
   position: relative;
   &__title {
     text-align: center;
+    font-family: 'Special Elite', cursive;
   }
   &__box {
     display: grid;
@@ -45,7 +46,6 @@
     border-radius: 5px;
   }
   &__text {
-    //letter-spacing: 1.5px;
     margin: 0;
     text-align: center;
     color: white;
