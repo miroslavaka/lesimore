@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
   line-height: 1.5;
   color: #424141;
+  // font-family: 'Cabin', sans-serif;
+  // font-family: 'Amatic SC', cursive;
+  // font-family: 'Khand', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
 }
 *,
 ::before,
@@ -124,6 +128,11 @@ body {
       0 4px 4px rgb(0, 0, 0, 0.01);
     margin: 3rem 0;
   }
+  &__subtitle-highlighted {
+    // display: inline-block;
+    background-color: #d6e3dd;
+    //padding: 0.2px;
+  }
 }
 .cards {
   margin-left: auto;
@@ -231,6 +240,7 @@ body {
     display: inline-block;
     margin-left: 40px;
     font-size: x-large;
+    //letter-spacing: 1.5px;
   }
   p {
     font-size: 1.1rem;
