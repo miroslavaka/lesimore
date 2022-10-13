@@ -1,3 +1,5 @@
+@use 'colors';
+
 .services {
   position: relative;
   &__title {
@@ -11,10 +13,10 @@
   &__description {
     width: 80px;
     height: 80px;
-    background-color: #d6e3dd;
+    background-color: colors.$color-primary;
     font-size: 1.1rem;
     border-radius: 50%;
-    border: 1.5px solid white;
+    border: 1.5px solid colors.$color-white;
     box-shadow: 0px 1px 2.5px 0px rgba(0, 0, 0, 0.2);
     position: absolute;
     left: 4.5rem;
@@ -48,7 +50,7 @@
   &__text {
     margin: 0;
     text-align: center;
-    color: white;
+    color: colors.$color-white;
     text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
       0 4px 4px rgb(0, 0, 0, 0.01);
   }
@@ -132,9 +134,9 @@
   &__label {
     width: 100px;
     height: 100px;
-    background-color: #d6e3dd;
+    background-color: colors.$color-primary;
     border-radius: 50%;
-    border: 1.5px solid white;
+    border: 1.5px solid colors.$color-white;
     box-shadow: 0px 1px 2.5px 0px rgba(0, 0, 0, 0.2);
     position: absolute;
     left: 4.5rem;
@@ -151,7 +153,7 @@
   }
   &__subtitle {
     text-align: center;
-    color: white;
+    color: colors.$color-white;
     text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
       0 4px 4px rgb(0, 0, 0, 0.01);
   }

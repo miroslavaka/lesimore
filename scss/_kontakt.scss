@@ -1,3 +1,5 @@
+@use 'colors';
+
 .contact {
   text-align: center;
   margin-left: auto;
@@ -5,11 +7,11 @@
   padding-top: 25px;
   letter-spacing: 1.5px;
   &__email a {
-    color: #424141;
+    color: colors.$color-primary-font;
     text-decoration: none;
   }
   &__email a:hover {
-    color: #d6e3dd;
+    color: colors.$color-primary;
     text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
       0 4px 4px rgb(0, 0, 0, 0.01);
     transition: 2s;
@@ -19,14 +21,14 @@
   }
   &__social a {
     text-decoration: none;
-    color: #424141;
+    color: colors.$color-primary-font;
     font-size: x-large;
     text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
       0 4px 4px rgb(0, 0, 0, 0.01);
     margin: 0 5px;
   }
   &__social a:hover {
-    color: #d6e3dd;
+    color: colors.$color-primary;
     transition: 2s ease;
   }
 
@@ -71,11 +73,11 @@
     justify-self: center;
     letter-spacing: 1.5px;
     font-size: 1rem;
-    color: #424141;
+    color: colors.$color-primary-font;
     text-align: center;
     width: 20%;
     max-width: 200px;
-    background-color: #d6e3dd;
+    background-color: colors.$color-primary;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -105,7 +107,6 @@
     font-size: 1.1rem;
     user-select: none;
     pointer-events: none;
-    //animation: animate 7.5s linear infinite;
   }
   &__text span {
     position: absolute;

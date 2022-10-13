@@ -1,3 +1,5 @@
+@use 'colors';
+
 .product {
   &__box {
     display: flex;
@@ -12,7 +14,7 @@
     color: #424141;
   }
   &__vip {
-    background-color: #d6e3dd;
+    background-color: colors.$color-primary;
     padding: 0.6rem 3rem;
     border-radius: 5px;
   }
@@ -39,7 +41,7 @@
   &__title {
     text-align: center;
     letter-spacing: 1.5px;
-    color: white;
+    color: colors.$color-white;
     position: absolute;
     top: 20px;
     left: 35%;

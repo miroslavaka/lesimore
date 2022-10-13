@@ -1,3 +1,5 @@
+@use 'colors';
+
 .projects {
   padding: 50px;
 
@@ -41,7 +43,7 @@
   &__activity a {
     text-decoration: none;
     text-align: center;
-    color: #424141;
+    color: colors.$color-primary-font;
   }
   &__activity a:hover {
     color: #d6e3dd;

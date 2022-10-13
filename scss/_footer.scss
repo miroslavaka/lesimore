@@ -1,3 +1,5 @@
+@use 'colors';
+
 .footer {
   position: relative;
   grid-row: 4/5;
@@ -23,7 +25,7 @@
     margin-top: 0;
     margin-bottom: 0;
     justify-self: right;
-    color: #424141;
+    color: colors.$color-primary-font;
   }
   &__link {
     justify-self: left;
@@ -31,7 +33,7 @@
     text-decoration: none;
   }
   &__link:hover {
-    color: #d6e3dd;
+    color: colors.$color-primary;
     text-shadow: 0 1px 1px rgb(0, 0, 0, 0.01), 0 2px 2px rgb(0, 0, 0, 0.01),
       0 4px 4px rgb(0, 0, 0, 0.01);
     transition: 2s;
@@ -43,7 +45,7 @@
     text-decoration: none;
   }
   &__social .fa {
-    color: #d6e3dd;
+    color: colors.$color-primary;
     padding: 7px;
     text-decoration: none;
     font-size: x-large;
@@ -55,7 +57,7 @@
     position: absolute;
     display: inline-block;
     width: 400px;
-    border-top: 2px solid #d6e3dd;
+    border-top: 2px solid colors.$color-primary;
     left: 50%;
     transform: translate(-50%, 0);
     margin-top: -15px;
@@ -64,7 +66,7 @@
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #d6e3dd;
+    background-color: colors.$color-primary;
     border-radius: 5px;
     text-align: center;
     opacity: 0.5;
